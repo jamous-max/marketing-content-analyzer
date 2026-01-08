@@ -14,7 +14,8 @@ It cleans text and extracts hashtags and mentions.
 ## What this shows
 - Python applied to marketing-related tasks  
 - Simple automation for content workflows 
-- Clear and organized code structure  
+- Clear and organized code structure
+- Counts hashtag frequency using Python dictionaries
 
 ## How to run the project
 1. Make sure Python is installed  
