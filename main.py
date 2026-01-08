@@ -1,4 +1,4 @@
-# Project version 1.1 – minor cleanup
+# Project version 1.2 – add hashtag frequency analysis
 
 """
 Marketing Content Analyzer
