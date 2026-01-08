@@ -46,7 +46,6 @@ def extract_hashtags(cleaned_text):
 
     return hashtags
 
-
 def extract_mentions(cleaned_text):
     words = cleaned_text.split()
     mentions = set()
@@ -57,6 +56,21 @@ def extract_mentions(cleaned_text):
             mentions.add(clean_word)
 
     return mentions
+
+def count_hashtag_frequency(cleaned_text):
+    words = cleaned_text.split()
+    counts = {}
+
+    for word in words:
+        clean_word = word.rstrip(".,!?;:")
+        if clean_word.startswith("#"):
+            if clean_word in counts:
+                counts[clean_word] += 1
+            else:
+                counts[clean_word] = 1
+
+    return counts
+
 
 
 def save_cleaned_text(cleaned_text):
@@ -75,6 +89,12 @@ def save_mentions(mentions):
         for mention in mentions:
             f.write(mention + "\n")
 
+def save_hashtag_frequency(hashtag_counts):
+    with open(OUTPUT_DIR / "hashtag_frequency.txt", "w", encoding="utf-8") as f:
+        for tag, count in hashtag_counts.items():
+            f.write(f"{tag}: {count}\n")
+
+
 
 def main():
     posts = read_posts(INPUT_FILE)
@@ -82,8 +102,16 @@ def main():
     hashtags = extract_hashtags(cleaned_text)
     mentions = extract_mentions(cleaned_text)
 
+    hashtag_counts = count_hashtag_frequency(cleaned_text)
+
+    
+    mention_counts = {}
+
+
     save_cleaned_text(cleaned_text)
     save_hashtags(hashtags)
+    save_hashtag_frequency(hashtag_counts)
+
     save_mentions(mentions)
 
 
