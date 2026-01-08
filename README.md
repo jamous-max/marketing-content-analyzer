@@ -8,7 +8,8 @@ It cleans text and extracts hashtags and mentions.
 - Reads text from a file  
 - Cleans the content and removes extra spaces 
 - Extracts hashtags and mentions  
-- Saves the results into output files  
+- Saves the results into output files
+- Counts hashtag frequency using Python dictionaries
 
 ## What this shows
 - Python applied to marketing-related tasks  
