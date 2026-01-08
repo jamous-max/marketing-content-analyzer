@@ -1,3 +1,5 @@
+# Project version 1.1 – minor cleanup
+
 """
 Marketing Content Analyzer
 

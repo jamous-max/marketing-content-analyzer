@@ -23,3 +23,6 @@ It cleans text and extracts hashtags and mentions.
 
 ## Notes
 This is a small utility project created for learning and experimentation.
+
+Last updated: January 2026
+
