@@ -9,7 +9,16 @@ It cleans text and extracts hashtags and mentions.
 - Cleans the content and removes extra spaces 
 - Extracts hashtags and mentions  
 - Saves the results into output files
-- Counts hashtag frequency using Python dictionaries
+- Counts hashtag and mention frequency using Python dictionaries
+
+## Project Structure
+
+- `input/posts.txt` — raw social media posts
+- `output/cleaned_posts.txt` — cleaned text
+- `output/hashtags.txt` — extracted hashtags
+- `output/mentions.txt` — extracted mentions
+- `output/hashtag_frequency.txt` — hashtag counts
+- `output/mention_frequency.txt` — mention counts
 
 ## What this shows
 - Python applied to marketing-related tasks  
