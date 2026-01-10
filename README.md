@@ -1,39 +1,56 @@
+
 # Marketing Content Analyzer
 
 ## Overview
-Python script for processing marketing and social media content.  
-It cleans text and extracts hashtags and mentions.
+
+Python script for processing marketing and social media content.
+It cleans text, extracts hashtags and mentions, and counts their frequency.
 
 ## What this project does
-- Reads text from a file  
-- Cleans the content and removes extra spaces 
-- Extracts hashtags and mentions  
-- Saves the results into output files
-- Counts hashtag and mention frequency using Python dictionaries
+
+* Reads text from a file
+* Cleans the content and removes extra spaces
+* Extracts hashtags and mentions
+* Saves the results into output files
+* Counts hashtag and mention frequency using Python dictionaries
+* Uses a configuration file to control input and output paths
 
 ## Project Structure
 
-- `input/posts.txt` — raw social media posts
-- `output/cleaned_posts.txt` — cleaned text
-- `output/hashtags.txt` — extracted hashtags
-- `output/mentions.txt` — extracted mentions
-- `output/hashtag_frequency.txt` — hashtag counts
-- `output/mention_frequency.txt` — mention counts
+* `config.json` — configuration file for input and output paths
+
+* `input/posts.txt` — raw social media posts
+
+* `output/cleaned_posts.txt` — cleaned text
+
+* `output/hashtags.txt` — extracted hashtags
+
+* `output/mentions.txt` — extracted mentions
+
+* `output/hashtag_frequency.txt` — hashtag counts
+
+* `output/mention_frequency.txt` — mention counts
+
+* `main.py` — main script
 
 ## What this shows
-- Python applied to marketing-related tasks  
-- Simple automation for content workflows 
-- Clear and organized code structure
-- Counts hashtag frequency using Python dictionaries
+
+* Python applied to marketing-related tasks
+* Simple automation for content workflows
+* Clear and organized code structure
+* Practical use of Python dictionaries
+* Config-driven file handling
 
 ## How to run the project
-1. Make sure Python is installed  
-2. Clone or download the repository  
-3. Run the script
 
+1. Make sure Python 3 is installed
+2. Clone or download the repository
+3. Place your text data in `input/posts.txt`
+4. Run the script
 
 ## Notes
+
 This is a small utility project created for learning and experimentation.
+Designed as a foundation for larger content automation workflows.
 
 Last updated: January 2026
-
