@@ -8,15 +8,23 @@ Marketing Content Analyzer
 - Counts hashtag and mention frequency
 - Saves structured outputs for analysis
 """
-
+import json
 from pathlib import Path
 
 # -----------------------------
 # Paths
 # -----------------------------
 BASE_DIR = Path(__file__).parent
-INPUT_FILE = BASE_DIR / "input" / "posts.txt"
-OUTPUT_DIR = BASE_DIR / "output"
+
+def load_config(base_dir):
+    config_path = base_dir / "config.json"
+    with open(config_path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+config = load_config(BASE_DIR)
+
+INPUT_FILE = BASE_DIR / config["input_file"]
+OUTPUT_DIR = BASE_DIR / config["output_dir"]
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # -----------------------------
